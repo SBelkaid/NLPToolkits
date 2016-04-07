@@ -10,7 +10,7 @@ Installation
 Clone the repository from github
 
 ````shell
-https://github.com/SBelkaid/NLPToolkits.git
+git clone https://github.com/SBelkaid/NLPToolkits.git
 ```` 
 
 
