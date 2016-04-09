@@ -46,7 +46,7 @@ The following is an image of the amount of unique cue phrases per relation sense
 
 ![alt tag](https://github.com/SBelkaid/NLPToolkits/blob/master/images/Screen%20Shot%202016-04-09%20at%209.07.35%20PM.png)
 
-Output of comparing the salience using tfidf to calculate the salience of both arguments. Usually resulting in a higher salience for the first argument.
+Output of comparing the salience of both arguments of one document using tfidf. Usually resulting in a higher salience for the first argument.
 
 ```shell
 ARG1: Solo woodwind players have to be creative 
