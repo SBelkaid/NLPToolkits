@@ -1,3 +1,11 @@
+Installation
+-----------
+Clone the repository from github
+
+```shell
+git clone https://github.com/SBelkaid/NLPToolkits.git
+``` 
+
 Usage
 -----
 
@@ -17,27 +25,25 @@ Shared Task Exploration
 distribution of relations in the training set.
 
 ```shell 
-Counter({u'Comparison': 492,
-         u'Comparison.Concession': 1277,
-         u'Comparison.Contrast': 4602,
-         u'Contingency': 2,
-         u'Contingency.Cause': 1,
-         u'Contingency.Cause.Reason': 3078,
-         u'Contingency.Cause.Result': 2006,
-         u'Contingency.Condition': 1152,
-         u'EntRel': 4133,
-         u'Expansion': 99,
-         u'Expansion.Alternative': 206,
-         u'Expansion.Alternative.Chosen alternative': 238,
-         u'Expansion.Conjunction': 7644,
-         u'Expansion.Exception': 15,
-         u'Expansion.Instantiation': 1401,
-         u'Expansion.Restatement': 2664,
-         u'Temporal': 5,
+Counter({u'Comparison': 347,
+         u'Comparison.Concession': 1080,
+         u'Comparison.Contrast': 2956,
+         u'Contingency': 1,
+         u'Contingency.Cause.Reason': 943,
+         u'Contingency.Cause.Result': 487,
+         u'Contingency.Condition': 1148,
+         u'Expansion': 24,
+         u'Expansion.Alternative': 195,
+         u'Expansion.Alternative.Chosen alternative': 96,
+         u'Expansion.Conjunction': 4323,
+         u'Expansion.Exception': 13,
+         u'Expansion.Instantiation': 236,
+         u'Expansion.Restatement': 121,
+         u'Temporal': 4,
          u'Temporal.Asynchronous': 3,
-         u'Temporal.Asynchronous.Precedence': 1230,
-         u'Temporal.Asynchronous.Succession': 985,
-         u'Temporal.Synchrony': 1302})
+         u'Temporal.Asynchronous.Precedence': 770,
+         u'Temporal.Asynchronous.Succession': 842,
+         u'Temporal.Synchrony': 1133})
 ```
 
 ![alt tag](https://raw.githubusercontent.com/SBelkaid/NLPToolkits/master/images/all_explicit.png)
@@ -207,11 +213,3 @@ SALIENCE ARG2 1.41419501089
 
 
 ```
-
-Installation
------------
-Clone the repository from github
-
-```shell
-git clone https://github.com/SBelkaid/NLPToolkits.git
-``` 
