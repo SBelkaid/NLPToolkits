@@ -29,9 +29,9 @@ Counter({u'Comparison': 492,
 
 ![alt tag](https://raw.githubusercontent.com/SBelkaid/NLPToolkits/master/images/Screen%20Shot%202016-04-09%20at%208.19.54%20PM.png)
 
-Output of comparing the salience using tfidf to calculate the salience of both arguments. Usually resulting in a higher salience for the fir argument.
- 
-```shell
+Output of comparing the salience using tfidf to calculate the salience of both arguments. Usually resulting in a higher salience for the first argument.
+
+shell
 ARG1: Solo woodwind players have to be creative
 SALIENCE ARG1 1.96610017517
 CONECTIVE: IF
@@ -117,9 +117,9 @@ Installation
 -----------
 Clone the repository from github
 
-````shell
+```shell
 git clone https://github.com/SBelkaid/NLPToolkits.git
-```` 
+``` 
 
 
 Usage
