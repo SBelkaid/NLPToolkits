@@ -42,7 +42,7 @@ Counter({u'Comparison': 492,
 
 ![alt tag](https://raw.githubusercontent.com/SBelkaid/NLPToolkits/master/images/Screen%20Shot%202016-04-09%20at%209.09.32%20PM.png)
 
-The following is an image of the amount of unique cue phrases per sense:
+The following is an image of the amount of unique cue phrases per relation sense:
 
 ![alt tag](https://github.com/SBelkaid/NLPToolkits/blob/master/images/Screen%20Shot%202016-04-09%20at%209.07.35%20PM.png)
 
