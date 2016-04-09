@@ -46,7 +46,7 @@ def calcSentSalience(sent):
 	feature_names = tfidf.get_feature_names()
 	return [(feature_names[col], response[0, col]) for col in response.nonzero()[1]]
 
-def onlyExplicit(max_amount=10, doc_id='wsj_0208'):
+def onlyExplicit(max_amount=10, doc_id='wsj_0207'):
 	"""
 	this functions returns relations from documents with regards to a certain document id
 	"""
@@ -72,7 +72,9 @@ def onlyExplicit(max_amount=10, doc_id='wsj_0208'):
 
 def extractData():
 	"""
-	extracts data from the given data structure by the task.
+	extracts data from the given data structure by the task including:
+	connective, type, sense, raw tokens args, token and pos-tag token,
+	the amount of tokens for each arg. 
 	"""
 
 	all_features = []
@@ -134,5 +136,5 @@ def extractData():
 
 
 some_feats, more_feats = extractData()
-onlyExplicit()
+onlyExplicit() #prints the output of one document
 cnt = Counter([rel['Sense'][0] for rel in relations if rel['Type']=='Explicit'])
