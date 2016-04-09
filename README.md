@@ -19,7 +19,7 @@ NameOfComputer: python exploratory_conll.py
 ```
 
 
-Shared Task Exploration
+Shared Task Data Exploration
 ------------
 
 distribution of relations in the training set.
