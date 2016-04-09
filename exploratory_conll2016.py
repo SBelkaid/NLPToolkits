@@ -1,12 +1,14 @@
 import json
 import codecs
 import os
-
+from collections import defaultdict
 from sklearn.feature_extraction import DictVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 ENGLISH_TRIAL = 'tutorial/conll16st-en-01-12-16-trial'
 ENGLISH_TRAIN = 'conll16st-en-zh-dev-train_LDC2016E50/conll16st-en-01-12-16-train'
+PATH_RAW_DOCS = 'conll16st-en-zh-dev-train_LDC2016E50/conll16st-en-01-12-16-train/raw/'
 
 #SET THE USE VARIABLE TO EITHER ENGLISH TRIAL OR THE ENGLISH TRAIN
 USE = ENGLISH_TRAIN
@@ -15,10 +17,56 @@ USE = ENGLISH_TRAIN
 pdtb_file = codecs.open(USE+'/relations.json', encoding='utf8')
 relations = [json.loads(x) for x in pdtb_file]
 en_parse_dict = json.load(codecs.open(USE+'/parses.json', encoding='utf8'))
+file_names = os.listdir(PATH_RAW_DOCS)
+tfidf_all_files = [codecs.open(PATH_RAW_DOCS+f, encoding='latin-1').read() for f in file_names]
+tfidf = TfidfVectorizer(min_df=1, encoding='latin-1', stop_words='english')
+X = tfidf.fit_transform(tfidf_all_files)
 # en_example_relation = relations[10]
 # en_doc_id = en_example_relation['DocID']
 
-def extract_data():
+def discourseConnectives():
+	"""
+	return a dictionairy of all the possible connective senses and how they occur
+	by putting the words indicating the type in a list 
+	"""
+	connectives = defaultdict(set)
+	for rel in relations:
+		if rel['Type']=='Explicit':
+				connectives[rel['Sense'][0]].add(rel['Connective']['RawText'].lower())
+	return connectives
+
+def calcSentSalience(sent):
+	"""
+	return list of tuples containing word and its tfidf value.
+	Words that haven't been seen before when vectorizing all files are omitted.
+	"""
+	response = tfidf.transform([sent])
+	feature_names = tfidf.get_feature_names()
+	return [(feature_names[col], response[0, col]) for col in response.nonzero()[1]]
+
+
+def onlyExplicit(max_amount=10, doc_id='wsj_0207'):
+	"""
+	this functions returns relations from documents with regards to a certain document id
+	"""
+	count = 0
+	for rel in relations:
+		if rel['Type']=='Explicit' and rel['DocID']==doc_id:
+			if count < max_amount:
+				print 'ARG1:', rel['Arg1']['RawText']
+				print 'SALIENCE ARG1', sum(zip(*calcSentSalience(rel['Arg1']['RawText']))[1])
+				print 'CONECTIVE:', rel['Connective']['RawText'].upper()
+				print 'SENSE:',rel['Sense'][0]
+				print 'ARG2:', rel['Arg2']['RawText']
+				print 'SALIENCE ARG2', sum(zip(*calcSentSalience(rel['Arg2']['RawText']))[1]), '\n\n'
+				count += 1
+
+
+def extractData():
+	"""
+	extracts data from the given data structure by the task.
+	"""
+
 	all_features = []
 	some_features = []
 	for rel in relations:
@@ -54,9 +102,14 @@ def extract_data():
 
 	# SOME INFO THAT CAN BE VECTORIZED
 	some_features.append({'id':rel_id, 'connective': connective, 'type': type_relation, 'arg1_raw':arg1_raw})
+	return some_features, all_features
 
 
-extract_data()
+# s, a = extractData()
+onlyExplicit()
+# print calcSentSalience('Solo woodwind players have to be creative if they want to work a lot, because their repertoire and audience appeal are limited.')
+
+
 
 
 
