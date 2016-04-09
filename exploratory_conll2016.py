@@ -1,11 +1,13 @@
 import json
 import codecs
 import os
+import pandas as pd
+import matplotlib.pyplot as plt
 from collections import defaultdict
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-
+plt.style.use('ggplot')
 ENGLISH_TRIAL = 'tutorial/conll16st-en-01-12-16-trial'
 ENGLISH_TRAIN = 'conll16st-en-zh-dev-train_LDC2016E50/conll16st-en-01-12-16-train'
 PATH_RAW_DOCS = 'conll16st-en-zh-dev-train_LDC2016E50/conll16st-en-01-12-16-train/raw/'
@@ -61,6 +63,15 @@ def onlyExplicit(max_amount=10, doc_id='wsj_0207'):
 				print 'SALIENCE ARG2', sum(zip(*calcSentSalience(rel['Arg2']['RawText']))[1]), '\n\n\n\n\n'
 				count += 1
 
+def plotBar(data_dict):
+	sorted_keys = sorted(data_dict)
+	sorted_vals = [data_dict[key] for key in sorted_keys]
+	print sorted_vals
+	df = pd.DataFrame(sorted_vals,sorted_keys)
+	df.plot.bar()
+	plt.show()
+	# unique_rels_sense = {key:len(val) for key, val in d.items()}
+
 
 def extractData():
 	"""
@@ -105,8 +116,10 @@ def extractData():
 	return some_features, all_features
 
 
-# s, a = extractData()
+some_feats, more_feats = extractData()
 onlyExplicit()
+cnt = Counter([rel['Sense'][0] for rel in relations])
+plotBar(cnt)
 # print calcSentSalience('Solo woodwind players have to be creative if they want to work a lot, because their repertoire and audience appeal are limited.')
 
 
