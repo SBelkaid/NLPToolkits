@@ -27,6 +27,9 @@ Counter({u'Comparison': 492,
          u'Temporal.Synchrony': 1302})
 ```
 
+![alt tag](https://raw.githubusercontent.com/SBelkaid/NLPToolkits/master/images/Screen%20Shot%202016-04-09%20at%208.19.54%20PM.png)
+
+
 
 
 Installation
