@@ -27,7 +27,7 @@ X = tfidf.fit_transform(tfidf_all_files)
 def discourseConnectives():
 	"""
 	return a dictionairy of all the possible connective senses and how they occur
-	by putting the words indicating the type in a list 
+	by putting the words indicating the type in a set.
 	"""
 	connectives = defaultdict(set)
 	for rel in relations:
@@ -53,12 +53,12 @@ def onlyExplicit(max_amount=10, doc_id='wsj_0207'):
 	for rel in relations:
 		if rel['Type']=='Explicit' and rel['DocID']==doc_id:
 			if count < max_amount:
-				print 'ARG1:', rel['Arg1']['RawText']
-				print 'SALIENCE ARG1', sum(zip(*calcSentSalience(rel['Arg1']['RawText']))[1])
-				print 'CONECTIVE:', rel['Connective']['RawText'].upper()
-				print 'SENSE:',rel['Sense'][0]
-				print 'ARG2:', rel['Arg2']['RawText']
-				print 'SALIENCE ARG2', sum(zip(*calcSentSalience(rel['Arg2']['RawText']))[1]), '\n\n'
+				print 'ARG1:', rel['Arg1']['RawText'], '\n'
+				print 'SALIENCE ARG1', sum(zip(*calcSentSalience(rel['Arg1']['RawText']))[1]), '\n'
+				print 'CONECTIVE:', rel['Connective']['RawText'].upper(), '\n'
+				print 'SENSE:',rel['Sense'][0], '\n'
+				print 'ARG2:', rel['Arg2']['RawText'], '\n'
+				print 'SALIENCE ARG2', sum(zip(*calcSentSalience(rel['Arg2']['RawText']))[1]), '\n\n\n\n\n'
 				count += 1
 
 
