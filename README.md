@@ -40,11 +40,11 @@ Counter({u'Comparison': 492,
          u'Temporal.Synchrony': 1302})
 ```
 
-![alt tag](https://raw.githubusercontent.com/SBelkaid/NLPToolkits/master/images/Screen%20Shot%202016-04-09%20at%208.19.54%20PM.png)
+![alt tag](https://raw.githubusercontent.com/SBelkaid/NLPToolkits/master/images/Screen%20Shot%202016-04-09%20at%209.09.32%20PM.png)
 
 The following is an image of the amount of unique cue phrases per sense:
 
-![alt tag](https://github.com/SBelkaid/NLPToolkits/blob/master/images/Screen%20Shot%202016-04-09%20at%208.52.45%20PM.png)
+![alt tag](https://github.com/SBelkaid/NLPToolkits/blob/master/images/Screen%20Shot%202016-04-09%20at%209.07.35%20PM.png)
 
 Output of comparing the salience using tfidf to calculate the salience of both arguments. Usually resulting in a higher salience for the first argument.
 
