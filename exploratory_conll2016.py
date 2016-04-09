@@ -46,8 +46,7 @@ def calcSentSalience(sent):
 	feature_names = tfidf.get_feature_names()
 	return [(feature_names[col], response[0, col]) for col in response.nonzero()[1]]
 
-
-def onlyExplicit(max_amount=10, doc_id='wsj_0207'):
+def onlyExplicit(max_amount=10, doc_id='wsj_0208'):
 	"""
 	this functions returns relations from documents with regards to a certain document id
 	"""
@@ -63,15 +62,13 @@ def onlyExplicit(max_amount=10, doc_id='wsj_0207'):
 				print 'SALIENCE ARG2', sum(zip(*calcSentSalience(rel['Arg2']['RawText']))[1]), '\n\n\n\n\n'
 				count += 1
 
-def plotBar(data_dict):
-	sorted_keys = sorted(data_dict)
-	sorted_vals = [data_dict[key] for key in sorted_keys]
-	print sorted_vals
-	df = pd.DataFrame(sorted_vals,sorted_keys)
-	df.plot.bar()
-	plt.show()
+# def plotBar(data_dict):
+# 	sorted_keys = sorted(data_dict)
+# 	sorted_vals = [data_dict[key] for key in sorted_keys]
+# 	df = pd.DataFrame(sorted_vals,sorted_keys)
+# 	df.plot.bar()
+# 	plt.show()
 	# unique_rels_sense = {key:len(val) for key, val in d.items()}
-
 
 def extractData():
 	"""
@@ -115,16 +112,7 @@ def extractData():
 	some_features.append({'id':rel_id, 'connective': connective, 'type': type_relation, 'arg1_raw':arg1_raw})
 	return some_features, all_features
 
-
-some_feats, more_feats = extractData()
-onlyExplicit()
-cnt = Counter([rel['Sense'][0] for rel in relations])
-plotBar(cnt)
 # print calcSentSalience('Solo woodwind players have to be creative if they want to work a lot, because their repertoire and audience appeal are limited.')
-
-
-
-
 
 # print "THIS IS A PARSETREE" 
 # print en_parse_dict[en_doc_id]['sentences'][15]['parsetree'], '\n\n\n\n\n'
@@ -141,3 +129,10 @@ plotBar(cnt)
 # vec = DictVectorizer()
 # X = vec.fit_transform(some_features)
 # print vec.get_feature_names()
+
+
+
+
+some_feats, more_feats = extractData()
+onlyExplicit()
+cnt = Counter([rel['Sense'][0] for rel in relations if rel['Type']=='Explicit'])
