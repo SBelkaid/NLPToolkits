@@ -1,4 +1,9 @@
-Installation
+Ipython Notebooks
+----------------
+Contain features extracted from the training data provided.
+
+
+Installation exploratory data analyisis
 -----------
 Clone the repository from github
 
