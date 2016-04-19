@@ -1,7 +1,6 @@
 import json
 import codecs
 import os
-import pandas as pd
 # import matplotlib.pyplot as plt
 from collections import defaultdict
 from sklearn.feature_extraction import DictVectorizer
@@ -16,7 +15,9 @@ PATH_RAW_DOCS = 'conll16st-en-zh-dev-train_LDC2016E50/conll16st-en-01-12-16-trai
 
 #SET THE USE VARIABLE TO EITHER ENGLISH TRIAL OR THE ENGLISH TRAIN
 USE = ENGLISH_TRAIN
-ANALYZER = CountVectorizer(ngram_range=(1,8), analyzer='word').build_analyzer()
+VECTORIZER = CountVectorizer(ngram_range=(1,8), analyzer='word', lowercase=False)
+ANALYZER = VECTORIZER.build_analyzer()
+
 
 def get_part_of_speech(docID, span):
     """
@@ -125,6 +126,7 @@ def constructTrainingData(list_of_relations):
 		tuplelist.append((features, 1))
 	return tuplelist
 
+
 def get_connective_dependency(docID, sentenceID, part_of_speech, connective):
     """
     Return heading and attached dependencies of connectives. 
@@ -144,6 +146,37 @@ def get_connective_dependency(docID, sentenceID, part_of_speech, connective):
 
     return dependency_heading, dependency_attached
 
+def mapCandidates(tokens, candidates):
+	"""
+	iterates through the tokens and offset parameter and finds the offset of the possible candidate.
+	This has been done because after making the ngrams the original token data is lost and requires
+	mapping. First the candidate cues are sorted based on length of phrase, this is done because 
+	an 1-gram can refer to the same word in an ngram so they can't be seen as seperate. Therefore,
+	the longer cues are extracted first. 
+	"""
+	identified_candidates = []
+	for candi in sorted(candidates, key=lambda x: len(x.split()), reverse=True):
+		candi_tokens = candi.split()
+		if len(candi_tokens) > 1:
+			phrase = []
+			for word in candi_tokens:
+				if word in zip(*tokens)[0]:
+					# print tokens[zip(*tokens)[0].index(word)]
+					phrase.append(tokens[zip(*tokens)[0].index(word)])
+					tokens.remove(tokens[zip(*tokens)[0].index(word)])
+			offset = [[phrase[0][1][0], phrase[-1][1][-1]]]
+			restructured = ' '.join(zip(*phrase)[0]), offset
+			identified_candidates.append(restructured)
+
+		else:
+			for token in zip(*tokens)[0]:
+				if candi == token:
+					# print candi, tokens[zip(*tokens)[0].index(candi)][1]
+					identified_candidate = (candi, [tokens[zip(*tokens)[0].index(candi)][1]])
+					identified_candidates.append(identified_candidate)
+					tokens.remove(tokens[zip(*tokens)[0].index(candi)])
+	return identified_candidates
+
 def comparePhrases(sorted_ngrams, mapping_connectives):
 	candidates = []
 	for gram in sorted_ngrams:
@@ -151,35 +184,63 @@ def comparePhrases(sorted_ngrams, mapping_connectives):
 			candidates.append(gram)
 	return candidates
 
-def extractCandidates(mapping_connectives):
+def showConnectives(doc_ID):
+	"""
+	print all the connectives in a document.
+	"""
+	real_connectives = []
+	for rel in KNOWN_RELATIONS:
+		if rel['DocID']== doc_ID and rel['Type'] == 'Explicit':
+			real_connectives.append((rel['Connective']['RawText'],rel['Connective']['CharacterSpanList']))
+			# print rel['Connective']['RawText'], rel['Connective']['CharacterSpanList']
+	return real_connectives
+
+def extractConstituentStruct(candidate_cue, docID):
+	"""
+	Extract constituent structure given the candidate connective, the document id and the Span offset which is with
+	the candidate cue 
+	"""
+	pass
+
+def extractCandidates(mapping_connectives, amount=20):
 	"""
 	Find candidate connectives, if it signals discourse structure then it's a candidate.
 	Extract n-grams to find phrases in the parsed data. 
+	I want to see if the connective is already in the relation list, by searching on docid, sentid and possible connective
 	"""
-
+	count = 0
 	for docID in PARSES:
 		sentences = PARSES[docID]['sentences']
 		print '\n\n\n\n',docID
 		print "amount of sentences: {}".format(len(sentences))
-		for sent in sentences:
-			# print "amount of words: {}".format(len(sent['words']))
-			# print "raw sentence: {}".format(' '.join([el[0] for el in sent['words']]))
+		candidates = []
+		for idx, sent in enumerate(sentences):
 			tagged = [(el[0],el[1]['PartOfSpeech']) for el in sent['words']]
-			print tagged, '\n\n\n\n'
-			tokens = zip(*sent['words'])[0]
-			sentence = ' '.join(tokens)
+			tokens_and_offset = [(el[0], list([el[1]['CharacterOffsetBegin'], el[1]['CharacterOffsetEnd']])) for el in sent['words']]
+			sentence = ' '.join(zip(*tokens_and_offset)[0])
 			ngrams = ANALYZER(sentence)
 			sorted_on_length = sorted(ngrams, key=lambda x:len(x))
 			candidate_cues = comparePhrases(sorted_on_length, mapping_connectives)
+			candidate_cues = mapCandidates(tokens_and_offset, candidate_cues) #MAP THE WORDS TO THE OFFSET
+			#ALL THE CANDIDATES IN THE DOCUMENT
+			candidates.extend(candidate_cues)
+			real_connectives = showConnectives(docID)
 
-		break
-
+		print candidates
+		print real_connectives
+		count+=1
+		if count==amount:
+			break
+		
 
 if __name__ == '__main__':
 	KNOWN_RELATIONS = [json.loads(line) for line in open(ENGLISH_TRAIN+'relations.json', 'r')]
 	PARSES = json.load(open(ENGLISH_TRAIN+'parses.json', 'r'))
-	unique_conn_mapping = discourseConnectives()
-	extractCandidates(unique_conn_mapping)
+	# unique_conn_mapping = discourseConnectives()
+	# extractCandidates(unique_conn_mapping)
+	doc_id = 'wsj_0802'
+	candi = (u'for', [[84, 87]])
+	extractConstituentStruct(candi,docID)
 	# training_data = constructTrainingData(KNOWN_RELATIONS)
 
 	# test =  [
