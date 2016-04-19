@@ -85,6 +85,7 @@ def constructTrainingData(list_of_relations):
 		tokenID = tokenlist[0][2]
 		sentenceID = tokenlist[0][3]
 		sentence_position = tokenlist[0][4]
+
 		arg1 = relation["Arg1"]
 		arg1_extent = arg1["CharacterSpanList"][0]
 		arg1_sentenceID = arg1["TokenList"][0][3]
@@ -99,7 +100,7 @@ def constructTrainingData(list_of_relations):
 		part_of_speech = get_part_of_speech(docID, connective_extent)
 		phrase_structure = get_phrase_structure(docID, sentenceID)
 		# print docID, sentenceID, part_of_speech, connective
-		dependency_heading, dependency_attached = get_connective_dependency(docID, sentenceID, part_of_speech, connective)
+		dependency_heading, dependency_attached = get_connective_dependency(docID, sentenceID, connective)
 		connectivelist.append(connective.lower())
 		features = {'connective': connective,
 		 'pos': part_of_speech,
@@ -127,7 +128,7 @@ def constructTrainingData(list_of_relations):
 	return tuplelist
 
 
-def get_connective_dependency(docID, sentenceID, part_of_speech, connective):
+def get_connective_dependency(docID, sentenceID, connective):
     """
     Return heading and attached dependencies of connectives. 
     """
@@ -164,9 +165,10 @@ def mapCandidates(tokens, candidates):
 					# print tokens[zip(*tokens)[0].index(word)]
 					phrase.append(tokens[zip(*tokens)[0].index(word)])
 					tokens.remove(tokens[zip(*tokens)[0].index(word)])
-			offset = [[phrase[0][1][0], phrase[-1][1][-1]]]
-			restructured = ' '.join(zip(*phrase)[0]), offset
-			identified_candidates.append(restructured)
+			if phrase:
+				offset = [[phrase[0][1][0], phrase[-1][1][-1]]]
+				restructured = ' '.join(zip(*phrase)[0]), offset
+				identified_candidates.append(restructured)
 
 		else:
 			for token in zip(*tokens)[0]:
@@ -184,9 +186,9 @@ def comparePhrases(sorted_ngrams, mapping_connectives):
 			candidates.append(gram)
 	return candidates
 
-def showConnectives(doc_ID):
+def returnRealConnectives(doc_ID):
 	"""
-	print all the connectives in a document.
+	print all the actual connectives in a document.
 	"""
 	real_connectives = []
 	for rel in KNOWN_RELATIONS:
@@ -202,45 +204,80 @@ def extractConstituentStruct(candidate_cue, docID):
 	"""
 	pass
 
-def extractCandidates(mapping_connectives, amount=20):
+def returnNegativeSamples(real_cue_list, candidate_cue_list):
+	"""
+	compare the candidate cues with the real cues, if it's the same then it will be removed rom the candidate list.
+	It will return a list of negative samples of cue phrases. In order for the binary classifier. 
+	"""
+	for candi_cue, offset, __1, __2, __3 in candidate_cue_list:
+		for real_cue, r_offset in real_cue_list:
+			if offset == r_offset:
+				# print zip(*candidate_cue_list)[0].index(candi_cue)
+				real = candidate_cue_list.pop(zip(*candidate_cue_list)[0].index(candi_cue))
+	return candidate_cue_list
+
+
+def extractCandidates(mapping_connectives, amount=3):
 	"""
 	Find candidate connectives, if it signals discourse structure then it's a candidate.
 	Extract n-grams to find phrases in the parsed data. 
 	I want to see if the connective is already in the relation list, by searching on docid, sentid and possible connective
+	the functions returns the negative samples in the dataset. 
 	"""
 	count = 0
+	all_candidates = {}
 	for docID in PARSES:
 		sentences = PARSES[docID]['sentences']
 		print '\n\n\n\n',docID
 		print "amount of sentences: {}".format(len(sentences))
-		candidates = []
+		doc_condidates = []
+		
 		for idx, sent in enumerate(sentences):
+			sentence_number = idx
 			tagged = [(el[0],el[1]['PartOfSpeech']) for el in sent['words']]
-			tokens_and_offset = [(el[0], list([el[1]['CharacterOffsetBegin'], el[1]['CharacterOffsetEnd']])) for el in sent['words']]
+			tokens_and_offset = [(el[0], list([el[1]['CharacterOffsetBegin'],\
+							 el[1]['CharacterOffsetEnd']])) for el in sent['words']]
 			sentence = ' '.join(zip(*tokens_and_offset)[0])
 			ngrams = ANALYZER(sentence)
 			sorted_on_length = sorted(ngrams, key=lambda x:len(x))
 			candidate_cues = comparePhrases(sorted_on_length, mapping_connectives)
 			candidate_cues = mapCandidates(tokens_and_offset, candidate_cues) #MAP THE WORDS TO THE OFFSET
-			#ALL THE CANDIDATES IN THE DOCUMENT
-			candidates.extend(candidate_cues)
-			real_connectives = showConnectives(docID)
+			candidate_and_features = []
+			if candidate_cues: #example: [(word, [[123,124]])]
 
-		print candidates
-		print real_connectives
+				for element in candidate_cues:
+					phrase_structure = get_phrase_structure(docID, sentence_number)
+					position = sentence.split().index(element[0].split()[0])
+					dependency = get_connective_dependency(docID, sentence_number, element[0])[0]
+					candidate_and_features.append((element[0], element[1], phrase_structure, position, dependency)) # [(word, [[123,124]], 'phrasestructure', position, dependency)]
+
+		# 	#ALL THE CANDIDATES IN THE DOCUMENT
+			real_connectives = returnRealConnectives(docID)
+			doc_condidates.extend(candidate_and_features)
+
+		# print real_connectives
+		# print doc_condidates[0]
+		negative_samples = returnNegativeSamples(real_connectives, doc_condidates)
+		# print negative_samples
+		all_candidates[docID] = negative_samples
+		# print doc_condidates
+		# print real_connectives
 		count+=1
-		if count==amount:
-			break
-		
+		if amount != None:
+			if count==amount:
+				return all_candidates
+				break
+	return all_candidates
+
+
+
+
 
 if __name__ == '__main__':
 	KNOWN_RELATIONS = [json.loads(line) for line in open(ENGLISH_TRAIN+'relations.json', 'r')]
 	PARSES = json.load(open(ENGLISH_TRAIN+'parses.json', 'r'))
-	# unique_conn_mapping = discourseConnectives()
-	# extractCandidates(unique_conn_mapping)
-	doc_id = 'wsj_0802'
-	candi = (u'for', [[84, 87]])
-	extractConstituentStruct(candi,docID)
+	unique_conn_mapping = discourseConnectives()
+	negative_samples = extractCandidates(unique_conn_mapping)
 	# training_data = constructTrainingData(KNOWN_RELATIONS)
 
 	# test =  [
