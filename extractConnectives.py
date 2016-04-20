@@ -1,6 +1,7 @@
 import json
 import codecs
 import os
+import pickle
 # import matplotlib.pyplot as plt
 from collections import defaultdict
 from sklearn.feature_extraction import DictVectorizer
@@ -8,6 +9,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk.classify import maxent
 from nltk.classify.util import accuracy
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn import cross_validation
+
 # plt.style.use('ggplot')
 ENGLISH_TRIAL = 'tutorial/conll16st-en-01-12-16-trial'
 ENGLISH_TRAIN = 'conll16st-en-zh-dev-train_LDC2016E50/conll16st-en-01-12-16-train/'
@@ -103,7 +106,7 @@ def constructTrainingData(list_of_relations):
 		dependency_heading, dependency_attached = get_connective_dependency(docID, sentenceID, connective)
 		connectivelist.append(connective.lower())
 		features = {'connective': connective,
-		 'pos': part_of_speech,
+		 # 'pos': part_of_speech,
 		 'position': sentence_position,
 		 'dependency':dependency_heading,
 		 'phrase_structure':phrase_structure}
@@ -156,6 +159,7 @@ def mapCandidates(tokens, candidates):
 	the longer cues are extracted first. 
 	"""
 	identified_candidates = []
+	duplicate_real_cues = []
 	for candi in sorted(candidates, key=lambda x: len(x.split()), reverse=True):
 		candi_tokens = candi.split()
 		if len(candi_tokens) > 1:
@@ -164,7 +168,9 @@ def mapCandidates(tokens, candidates):
 				if word in zip(*tokens)[0]:
 					# print tokens[zip(*tokens)[0].index(word)]
 					phrase.append(tokens[zip(*tokens)[0].index(word)])
-					tokens.remove(tokens[zip(*tokens)[0].index(word)])
+					removed = tokens.pop(zip(*tokens)[0].index(word))
+					# duplicate_real_cues.append(removed)
+
 			if phrase:
 				offset = [[phrase[0][1][0], phrase[-1][1][-1]]]
 				restructured = ' '.join(zip(*phrase)[0]), offset
@@ -177,7 +183,7 @@ def mapCandidates(tokens, candidates):
 					identified_candidate = (candi, [tokens[zip(*tokens)[0].index(candi)][1]])
 					identified_candidates.append(identified_candidate)
 					tokens.remove(tokens[zip(*tokens)[0].index(candi)])
-	return identified_candidates
+	return identified_candidates, duplicate_real_cues
 
 def comparePhrases(sorted_ngrams, mapping_connectives):
 	candidates = []
@@ -217,7 +223,7 @@ def returnNegativeSamples(real_cue_list, candidate_cue_list):
 	return candidate_cue_list
 
 
-def extractCandidates(mapping_connectives, amount=3):
+def extractCandidates(mapping_connectives, amount=None):
 	"""
 	Find candidate connectives, if it signals discourse structure then it's a candidate.
 	Extract n-grams to find phrases in the parsed data. 
@@ -241,13 +247,17 @@ def extractCandidates(mapping_connectives, amount=3):
 			ngrams = ANALYZER(sentence)
 			sorted_on_length = sorted(ngrams, key=lambda x:len(x))
 			candidate_cues = comparePhrases(sorted_on_length, mapping_connectives)
-			candidate_cues = mapCandidates(tokens_and_offset, candidate_cues) #MAP THE WORDS TO THE OFFSET
+			candidate_cues, removed = mapCandidates(tokens_and_offset, candidate_cues) #MAP THE WORDS TO THE OFFSET
 			candidate_and_features = []
 			if candidate_cues: #example: [(word, [[123,124]])]
 
 				for element in candidate_cues:
 					phrase_structure = get_phrase_structure(docID, sentence_number)
-					position = sentence.split().index(element[0].split()[0])
+					splitted_cue_phrase = element[0].split()
+					position = sentence.split().index(splitted_cue_phrase[0])
+					# if len(splitted_cue_phrase)>1:
+						# pos = None
+					# else:
 					dependency = get_connective_dependency(docID, sentence_number, element[0])[0]
 					candidate_and_features.append((element[0], element[1], phrase_structure, position, dependency)) # [(word, [[123,124]], 'phrasestructure', position, dependency)]
 
@@ -270,31 +280,35 @@ def extractCandidates(mapping_connectives, amount=3):
 	return all_candidates
 
 
+def transformNeg(negative_samples):
+	negative_features = []
+	for docID in negative_samples.keys():
+		for neg_connective in negative_samples[docID]:
+			negative_features.append(({'connective': neg_connective[0],\
+			 'position': neg_connective[3], 'dependency':neg_connective[4], 'phrase_structure': neg_connective[2]},0))
+	return negative_features
+
+
 
 
 
 if __name__ == '__main__':
 	KNOWN_RELATIONS = [json.loads(line) for line in open(ENGLISH_TRAIN+'relations.json', 'r')]
 	PARSES = json.load(open(ENGLISH_TRAIN+'parses.json', 'r'))
-	unique_conn_mapping = discourseConnectives()
-	negative_samples = extractCandidates(unique_conn_mapping)
-	# training_data = constructTrainingData(KNOWN_RELATIONS)
+	# unique_conn_mapping = discourseConnectives()
+	# negative_samples = extractCandidates(unique_conn_mapping) #stored this using pickle
+	training_data = constructTrainingData(KNOWN_RELATIONS)
+	neg = pickle.load(open('v2_negative_samples.pickle', 'r'))
+	neg_training = transformNeg(neg)
+	training_data.extend(neg_training)
+	train, target = zip(*training_data)
+	X_train, X_test, y_train, y_test = cross_validation.train_test_split(train, target, test_size=0.2)
 
-	# test =  [
-	#     {'connective': 'until', 'pos': 'IN', 'position': 18},
-	#     {'connective': 'until', 'pos': 'IN', 'position': 6},
-	#     {'connective': 'before', 'pos': 'IN', 'position': 13},
-	#     {'connective': 'Moreover', 'pos': 'RB', 'position': 0},
-	#     {'connective': 'but', 'pos': 'CC', 'position': 16},
-	#     {'connective': 'after', 'pos': 'IN', 'position': 21},
-	#     {'connective': 'Testing', 'pos': 'XXX', 'position': 90}
-	#   ]
+	encoding = maxent.TypedMaxentFeatureEncoding.train(
+	    zip(X_train, y_train), count_cutoff=3, alwayson_features=True)
 
-	# encoding = maxent.TypedMaxentFeatureEncoding.train(
-	#     training_data, count_cutoff=3, alwayson_features=True)
+	classifier = maxent.MaxentClassifier.train(
+	    zip(X_train, y_train), bernoulli=False, encoding=encoding, trace=0)
 
-	# classifier = maxent.MaxentClassifier.train(
-	#     training_data, bernoulli=False, encoding=encoding, trace=0)
-
-	# # print classifier.classify_many(test)
+	accuracy(classifier, zip(X_test,y_test))
 
