@@ -1,19 +1,14 @@
-
+"""
+multi-label classifier for discourse connectives
+"""
 import json
 import codecs
 import os
 import pickle
-# import matplotlib.pyplot as plt
 from collections import defaultdict
 from sklearn.feature_extraction import DictVectorizer
-from sklearn.feature_extraction.text import TfidfVectorizer
-from nltk.classify import maxent
-from nltk.classify.util import accuracy
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn import cross_validation
-from sklearn.preprocessing import LabelBinarizer
-from nltk.classify import MultiClassifierI
-from nltk.classify import SklearnClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.multiclass import OneVsRestClassifier
@@ -174,9 +169,3 @@ if __name__ == '__main__':
 	predicted = clf.predict(X_test)
 	print classification_report(y_test, predicted)
 	print "Accuracy: {}".format(accuracy_score(y_test, predicted))
-	# print "Recall: {}".format(recall_score(y_test, predicted))
-
-
-
-
-
