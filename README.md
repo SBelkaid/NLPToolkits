@@ -1,3 +1,41 @@
+
+Results
+---------------
+
+multi-label classification of the connectives.
+
+```shell
+Classifying 2945 test samples
+             precision    recall  f1-score   support
+
+          0       1.00      0.01      0.03        77
+          1       0.66      0.15      0.25       216
+          2       0.67      0.82      0.73       609
+          3       0.00      0.00      0.00         1
+          4       0.97      0.60      0.75       235
+          5       1.00      0.65      0.79       133
+          6       0.99      0.80      0.88       235
+          7       0.00      0.00      0.00         6
+          8       0.93      0.42      0.58        33
+          9       0.90      0.82      0.86        22
+         10       0.97      0.93      0.95       884
+         11       0.00      0.00      0.00         3
+         12       1.00      0.89      0.94        44
+         13       1.00      0.20      0.33        25
+         14       0.00      0.00      0.00         0
+         15       0.00      0.00      0.00         1
+         16       0.91      0.85      0.88       150
+         17       0.99      0.51      0.67       155
+         18       0.71      0.76      0.73       271
+
+avg / total       0.86      0.73      0.76      3100
+
+Accuracy: 0.725297113752
+
+```
+
+
+
 Ipython Notebooks
 ----------------
 Contain features extracted from the training data provided.
