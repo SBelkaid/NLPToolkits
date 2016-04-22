@@ -32,6 +32,27 @@ avg / total       0.86      0.73      0.76      3100
 
 Accuracy: 0.725297113752
 
+The labels:
+
+Comparison
+Comparison.Concession
+Comparison.Contrast
+Contingency
+Contingency.Cause.Reason
+Contingency.Cause.Result
+Contingency.Condition
+Expansion
+Expansion.Alternative
+Expansion.Alternative.Chosen alternative
+Expansion.Conjunction
+Expansion.Exception
+Expansion.Instantiation
+Expansion.Restatement
+Temporal
+Temporal.Asynchronous
+Temporal.Asynchronous.Precedence
+Temporal.Asynchronous.Succession
+Temporal.Synchrony
 ```
 
 
