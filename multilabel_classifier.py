@@ -20,6 +20,7 @@ from sklearn.multiclass import OneVsRestClassifier
 from sklearn.preprocessing import MultiLabelBinarizer as mlb
 from sklearn.datasets import make_multilabel_classification
 from sklearn.metrics import accuracy_score, precision_score, recall_score
+from sklearn.metrics import classification_report
 
 # plt.style.use('ggplot')
 ENGLISH_TRIAL = 'tutorial/conll16st-en-01-12-16-trial'
@@ -149,10 +150,16 @@ def get_connective_dependency(docID, sentenceID, connective):
 
 
 if __name__ == '__main__':
+	print "Loading training data "
 	KNOWN_RELATIONS = [json.loads(line) for line in open(ENGLISH_TRAIN+'relations.json', 'r')]
+	print "Loading parsed data"
 	PARSES = json.load(open(ENGLISH_TRAIN+'parses.json', 'r'))
+	print 'DONE'
+	print 'Constructing training data'
 	training_data = constructTrainingData(KNOWN_RELATIONS)
+	print 'DONE'
 	X_train, target = zip(*training_data)
+	print 'Vectorizing data'
 	vec = DictVectorizer()
 	train = vec.fit_transform(X_train)
 	X_train, X_test, y_train, y_test = cross_validation.train_test_split(train, target, test_size=0.2)
@@ -160,10 +167,13 @@ if __name__ == '__main__':
 	mb = mlb()
 	y_train = mb.fit_transform(y_train)
 	y_test = mb.transform(y_test)
+	print 'Training classifier'
 	clf.fit(X_train,y_train)
+	print 'DONE'
+	print 'Classifying {} test samples'.format(y_test.shape[0])
 	predicted = clf.predict(X_test)
+	print classification_report(y_test, predicted)
 	print "Accuracy: {}".format(accuracy_score(y_test, predicted))
-	# print "Precision: {}".format(precision_score(y_test, predicted))
 	# print "Recall: {}".format(recall_score(y_test, predicted))
 
 
