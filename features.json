@@ -1,0 +1,4039 @@
+{
+    "wsj_0207": {
+        "Sentences": {
+            "0": [
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "ADJP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "ADJP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "connective": "because"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "VP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Solo",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "woodwind",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "players",
+                    "connective": "if"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "token": "have",
+                    "connective": "if"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "token": "to",
+                    "connective": "if"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "token": "be",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "ADJP",
+                    "token": "creative",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Solo",
+                    "connective": "because"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "woodwind",
+                    "connective": "because"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "players",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "token": "have",
+                    "connective": "because"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "token": "to",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "token": "be",
+                    "connective": "because"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "ADJP",
+                    "token": "creative",
+                    "connective": "because"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "token": "if",
+                    "connective": "because"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "token": "they",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "token": "want",
+                    "connective": "because"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "token": "to",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "token": "work",
+                    "connective": "because"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "a",
+                    "connective": "because"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "lot",
+                    "connective": "because"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "VP",
+                    "token": ",",
+                    "connective": "because"
+                }
+            ],
+            "1": [
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": ":",
+                    "constituent": "S",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBG",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "so"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "The",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "oboist",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Heinz",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Holliger",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "token": "has",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "taken",
+                    "connective": "so"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "a",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "hard",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "line",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "about",
+                    "connective": "so"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "problem",
+                    "connective": "so"
+                },
+                {
+                    "pos": ":",
+                    "constituent": "S",
+                    "token": ":",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "token": "He",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "VP",
+                    "token": "commissions",
+                    "connective": "so"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "token": "and",
+                    "connective": "so"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "token": "splendidly",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "token": "interprets",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "fearsome",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "contemporary",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "scores",
+                    "connective": "so"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "token": "and",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "token": "does",
+                    "connective": "so"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "some",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBG",
+                    "constituent": "NP",
+                    "token": "conducting",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "so"
+                }
+            ],
+            "4": [
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "though"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "though"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "though"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "though"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "though"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "connective": "though"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "connective": "though"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "though"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "though"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "though"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "though"
+                },
+                {
+                    "pos": "-LRB-",
+                    "constituent": "PRN",
+                    "connective": "though"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "Today",
+                    "connective": "though"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "though"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "though"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "pixie-like",
+                    "connective": "though"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "clarinetist",
+                    "connective": "though"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "token": "has",
+                    "connective": "though"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "token": "mostly",
+                    "connective": "though"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "dropped",
+                    "connective": "though"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "though"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "missionary",
+                    "connective": "though"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "work",
+                    "connective": "though"
+                },
+                {
+                    "pos": "-LRB-",
+                    "constituent": "PRN",
+                    "token": "-LRB-",
+                    "connective": "though"
+                }
+            ],
+            "33": [
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "NP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "S",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "MD",
+                    "constituent": "SQ",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "Managers",
+                    "connective": "but"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "NP",
+                    "token": "and",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "presenters",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "token": "insist",
+                    "connective": "but"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "token": "that",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "chamber",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "music",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "concerts",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "token": "are",
+                    "connective": "but"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "a",
+                    "connective": "but"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "hard",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "sell",
+                    "connective": "but"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "Managers",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "NP",
+                    "token": "and",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "presenters",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "token": "insist",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "token": "that",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "chamber",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "music",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "concerts",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "VBP",
+                    "constituent": "VP",
+                    "token": "are",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "a",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "hard",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "sell",
+                    "connective": "only if"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "S",
+                    "token": "but",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "MD",
+                    "constituent": "SQ",
+                    "token": "can",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "audiences",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "token": "really",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "token": "enjoy",
+                    "connective": "only if"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "token": "them",
+                    "connective": "only if"
+                }
+            ],
+            "7": [
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "WP",
+                    "constituent": "WHNP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "and"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "token": "He",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "token": "believes",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "in",
+                    "connective": "and"
+                },
+                {
+                    "pos": "WP",
+                    "constituent": "WHNP",
+                    "token": "what",
+                    "connective": "and"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "token": "he",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBZ",
+                    "constituent": "VP",
+                    "token": "plays",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "and"
+                }
+            ],
+            "10": [
+                {
+                    "pos": "CC",
+                    "constituent": "S",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "and"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "connective": "and"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "and"
+                },
+                {
+                    "pos": "``",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNPS",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "and"
+                },
+                {
+                    "pos": "''",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "connective": "and"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "and"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "S",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "so"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "so"
+                },
+                {
+                    "pos": "``",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNPS",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "so"
+                },
+                {
+                    "pos": "''",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "so"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "SBAR",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "POS",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "so"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "S",
+                    "token": "Clad",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "in",
+                    "connective": "and"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "token": "his",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "trademark",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "black",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "velvet",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "suit",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "and"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "soft-spoken",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "clarinetist",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "announced",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "token": "that",
+                    "connective": "and"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "token": "his",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "new",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "album",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "and"
+                },
+                {
+                    "pos": "``",
+                    "constituent": "NP",
+                    "token": "``",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Inner",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNPS",
+                    "constituent": "NP",
+                    "token": "Voices",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "and"
+                },
+                {
+                    "pos": "''",
+                    "constituent": "NP",
+                    "token": "''",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "had",
+                    "connective": "and"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "token": "just",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "been",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "released",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "token": "that",
+                    "connective": "and"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "token": "his",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "family",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "was",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "in",
+                    "connective": "and"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "front",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "row",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "and"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "S",
+                    "token": "Clad",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "in",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "token": "his",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "trademark",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "black",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "velvet",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "suit",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "so"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "soft-spoken",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "clarinetist",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "announced",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "token": "that",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "token": "his",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "new",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "album",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "so"
+                },
+                {
+                    "pos": "``",
+                    "constituent": "NP",
+                    "token": "``",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Inner",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NNPS",
+                    "constituent": "NP",
+                    "token": "Voices",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "so"
+                },
+                {
+                    "pos": "''",
+                    "constituent": "NP",
+                    "token": "''",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "had",
+                    "connective": "so"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "token": "just",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "been",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "released",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "token": "that",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "token": "his",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "family",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "was",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "in",
+                    "connective": "so"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "so"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "front",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "row",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "so"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "SBAR",
+                    "token": "and",
+                    "connective": "so"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "SBAR",
+                    "token": "that",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "token": "it",
+                    "connective": "so"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "was",
+                    "connective": "so"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "token": "his",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "mother",
+                    "connective": "so"
+                },
+                {
+                    "pos": "POS",
+                    "constituent": "NP",
+                    "token": "'s",
+                    "connective": "so"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "birthday",
+                    "connective": "so"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "so"
+                }
+            ],
+            "12": [
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "connective": "as if"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "as if"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "token": "Then",
+                    "connective": "as if"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "as if"
+                }
+            ],
+            "17": [
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "RP",
+                    "constituent": "PRT",
+                    "connective": "then"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "VBG",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "``",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "''",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Mr.",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Stoltzman",
+                    "connective": "then"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "tied",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "composer",
+                    "connective": "then"
+                },
+                {
+                    "pos": "RP",
+                    "constituent": "PRT",
+                    "token": "in",
+                    "connective": "then"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "by",
+                    "connective": "then"
+                },
+                {
+                    "pos": "VBG",
+                    "constituent": "VP",
+                    "token": "proclaiming",
+                    "connective": "then"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "token": "him",
+                    "connective": "then"
+                },
+                {
+                    "pos": "``",
+                    "constituent": "VP",
+                    "token": "``",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "then"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "great",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "improviser",
+                    "connective": "then"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "of",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "then"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "18th",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "century",
+                    "connective": "then"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "VP",
+                    "token": ",",
+                    "connective": "then"
+                },
+                {
+                    "pos": "''",
+                    "constituent": "VP",
+                    "token": "''",
+                    "connective": "then"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "token": "and",
+                    "connective": "then"
+                }
+            ],
+            "18": [
+                {
+                    "pos": "VBG",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "CD",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "then"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "PP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "POS",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "then"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "then"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "connective": "then"
+                },
+                {
+                    "pos": "VBG",
+                    "constituent": "VP",
+                    "token": "Keeping",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "mood",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "light",
+                    "connective": "then"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "then"
+                },
+                {
+                    "pos": "CD",
+                    "constituent": "NP",
+                    "token": "two",
+                    "connective": "then"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADVP",
+                    "token": "then",
+                    "connective": "then"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "chanted",
+                    "connective": "then"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "token": "and",
+                    "connective": "then"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "chortled",
+                    "connective": "then"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "token": "their",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "way",
+                    "connective": "then"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "through",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "some",
+                    "connective": "then"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "murderous",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "polyrhythms",
+                    "connective": "then"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "then"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "devised",
+                    "connective": "then"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "by",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Mr.",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Douglas",
+                    "connective": "then"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "as",
+                    "connective": "then"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "an",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "alternative",
+                    "connective": "then"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "PP",
+                    "token": "to",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Hindemith",
+                    "connective": "then"
+                },
+                {
+                    "pos": "POS",
+                    "constituent": "NP",
+                    "token": "'s",
+                    "connective": "then"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "dry",
+                    "connective": "then"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "theory-teaching",
+                    "connective": "then"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "techniques",
+                    "connective": "then"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "then"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "token": "and",
+                    "connective": "then"
+                }
+            ],
+            "22": [
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADJP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADJP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "ADJP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "but"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "token": "It",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "was",
+                    "connective": "but"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADJP",
+                    "token": "all",
+                    "connective": "but"
+                },
+                {
+                    "pos": "RB",
+                    "constituent": "ADJP",
+                    "token": "too",
+                    "connective": "but"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "ADJP",
+                    "token": "mellow",
+                    "connective": "but"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "token": "to",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "token": "be",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "believed",
+                    "connective": "but"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "but"
+                }
+            ],
+            "25": [
+                {
+                    "pos": "CC",
+                    "constituent": "SQ",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "SQ",
+                    "connective": "because"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "SQ",
+                    "token": "Or",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "SQ",
+                    "token": "was",
+                    "connective": "because"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "token": "it",
+                    "connective": "because"
+                }
+            ],
+            "26": [
+                {
+                    "pos": "CC",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "because"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "VP",
+                    "connective": "because"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "NP",
+                    "token": "Either",
+                    "connective": "because"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "way",
+                    "connective": "because"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "token": "it",
+                    "connective": "because"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "was",
+                    "connective": "because"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "a",
+                    "connective": "because"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "pity",
+                    "connective": "because"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "VP",
+                    "token": ",",
+                    "connective": "because"
+                }
+            ],
+            "31": [
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "ADJP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBG",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "but"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "but"
+                },
+                {
+                    "pos": "PRP",
+                    "constituent": "NP",
+                    "token": "It",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "was",
+                    "connective": "but"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "ADJP",
+                    "token": "enjoyable",
+                    "connective": "but"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "token": "to",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "token": "hear",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "NP",
+                    "token": "accomplished",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "jazz",
+                    "connective": "but"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "without",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VBG",
+                    "constituent": "VP",
+                    "token": "having",
+                    "connective": "but"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "token": "to",
+                    "connective": "but"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "token": "sit",
+                    "connective": "but"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "in",
+                    "connective": "but"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "a",
+                    "connective": "but"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "smoke-filled",
+                    "connective": "but"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "club",
+                    "connective": "but"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "but"
+                }
+            ]
+        }
+    },
+    "wsj_0208": {
+        "Sentences": {
+            "6": [
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "when"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "The",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "U.S.",
+                    "connective": "when"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "along",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "with",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Britain",
+                    "connective": "when"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "NP",
+                    "token": "and",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Singapore",
+                    "connective": "when"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "when"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "left",
+                    "connective": "when"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "agency",
+                    "connective": "when"
+                }
+            ],
+            "7": [
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "PP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "WRB",
+                    "constituent": "WHADVP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "and"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "PP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "WRB",
+                    "constituent": "WHADVP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "connective": "when"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "The",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "personal",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "antics",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "of",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "agency",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Director",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Amadou-Mahtar",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "M'Bow",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "drew",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "much",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "attention",
+                    "connective": "and"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "NP",
+                    "token": ",",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "PP",
+                    "token": "such",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "as",
+                    "connective": "and"
+                },
+                {
+                    "pos": "WRB",
+                    "constituent": "WHADVP",
+                    "token": "when",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "several",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "of",
+                    "connective": "and"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "token": "his",
+                    "connective": "and"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "top",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "aides",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "were",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "uncovered",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "as",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "KGB",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "plants",
+                    "connective": "and"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "token": "and",
+                    "connective": "and"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "ejected",
+                    "connective": "and"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "from",
+                    "connective": "and"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "France",
+                    "connective": "and"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "The",
+                    "connective": "when"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "personal",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "antics",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "of",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "agency",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Director",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "Amadou-Mahtar",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "M'Bow",
+                    "connective": "when"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "drew",
+                    "connective": "when"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "much",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "attention",
+                    "connective": "when"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "NP",
+                    "token": ",",
+                    "connective": "when"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "PP",
+                    "token": "such",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "as",
+                    "connective": "when"
+                },
+                {
+                    "pos": "WRB",
+                    "constituent": "WHADVP",
+                    "token": "when",
+                    "connective": "when"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "several",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "of",
+                    "connective": "when"
+                },
+                {
+                    "pos": "PRP$",
+                    "constituent": "NP",
+                    "token": "his",
+                    "connective": "when"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "top",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "aides",
+                    "connective": "when"
+                },
+                {
+                    "pos": "VBD",
+                    "constituent": "VP",
+                    "token": "were",
+                    "connective": "when"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "uncovered",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "as",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "KGB",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "plants",
+                    "connective": "when"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "token": "and",
+                    "connective": "when"
+                },
+                {
+                    "pos": "VBN",
+                    "constituent": "VP",
+                    "token": "ejected",
+                    "connective": "when"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "from",
+                    "connective": "when"
+                },
+                {
+                    "pos": "NNP",
+                    "constituent": "NP",
+                    "token": "France",
+                    "connective": "when"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "token": "and",
+                    "connective": "when"
+                }
+            ]
+        }
+    },
+    "wsj_0204": {
+        "Sentences": {
+            "11": [
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "CD",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "MD",
+                    "constituent": "VP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "ADJP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "connective": "if"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "connective": "if"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "connective": "if"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "Under",
+                    "connective": "if"
+                },
+                {
+                    "pos": "CD",
+                    "constituent": "NP",
+                    "token": "two",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "new",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "features",
+                    "connective": "if"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "participants",
+                    "connective": "if"
+                },
+                {
+                    "pos": "MD",
+                    "constituent": "VP",
+                    "token": "will",
+                    "connective": "if"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "token": "be",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "ADJP",
+                    "token": "able",
+                    "connective": "if"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "token": "to",
+                    "connective": "if"
+                },
+                {
+                    "pos": "VB",
+                    "constituent": "VP",
+                    "token": "transfer",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "money",
+                    "connective": "if"
+                },
+                {
+                    "pos": "IN",
+                    "constituent": "PP",
+                    "token": "from",
+                    "connective": "if"
+                },
+                {
+                    "pos": "DT",
+                    "constituent": "NP",
+                    "token": "the",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "new",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "funds",
+                    "connective": "if"
+                },
+                {
+                    "pos": "TO",
+                    "constituent": "VP",
+                    "token": "to",
+                    "connective": "if"
+                },
+                {
+                    "pos": "JJ",
+                    "constituent": "NP",
+                    "token": "other",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NN",
+                    "constituent": "NP",
+                    "token": "investment",
+                    "connective": "if"
+                },
+                {
+                    "pos": "NNS",
+                    "constituent": "NP",
+                    "token": "funds",
+                    "connective": "if"
+                },
+                {
+                    "pos": "CC",
+                    "constituent": "VP",
+                    "token": "or",
+                    "connective": "if"
+                },
+                {
+                    "pos": ",",
+                    "constituent": "S",
+                    "token": ",",
+                    "connective": "if"
+                }
+            ]
+        }
+    }
+}
