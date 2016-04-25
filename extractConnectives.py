@@ -16,6 +16,7 @@ from nltk.classify import maxent
 from nltk.classify.util import accuracy
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn import cross_validation
+from sklearn.metrics import classification_report
 
 # plt.style.use('ggplot')
 ENGLISH_TRIAL = 'tutorial/conll16st-en-01-12-16-trial'
@@ -214,6 +215,40 @@ def returnNegativeSamples(real_cue_list, candidate_cue_list):
 	return candidate_cue_list
 
 
+def return_pos(docID, sentence_number, token, offset):
+	"""
+	return pos tag given the docID sentence number, token and character offset
+	"""
+	# print PARSES[docID]['sentences'][sentence_number]['words']
+	# [zip(*PARSES[docID]['sentences'][1]['words'])[0].index(token[0])][1]['PartOfSpeech']
+	sentence = PARSES[docID]['sentences'][sentence_number]['words']
+	if len(token.split()) > 1:
+		combined = []
+		for tok in token.split():
+			PoS = sentence[zip(*sentence)[0].index(tok)][1]['PartOfSpeech']
+			combined.append(PoS)
+		return ' '.join(combined)
+	else:
+		return sentence[zip(*sentence)[0].index(token)][1]['PartOfSpeech']
+
+
+def return_pos(docID, sentence_number, token, offset):
+	"""
+	return pos tag given the docID sentence number, token and character offset
+	"""
+	# print PARSES[docID]['sentences'][sentence_number]['words']
+	# [zip(*PARSES[docID]['sentences'][1]['words'])[0].index(token[0])][1]['PartOfSpeech']
+	sentence = PARSES[docID]['sentences'][sentence_number]['words']
+	if len(token.split()) > 1:
+		combined = []
+		for tok in token.split():
+			PoS = sentence[zip(*sentence)[0].index(tok)][1]['PartOfSpeech']
+			combined.append(PoS)
+		return ' '.join(combined)
+	else:
+		return sentence[zip(*sentence)[0].index(token)][1]['PartOfSpeech']
+
+
 def extractCandidates(mapping_connectives, amount=None):
 	"""
 	Find candidate connectives, if it signals discourse structure then it's a candidate.
@@ -241,15 +276,15 @@ def extractCandidates(mapping_connectives, amount=None):
 			candidate_cues, removed = mapCandidates(tokens_and_offset, candidate_cues) #MAP THE WORDS TO THE OFFSET
 			candidate_and_features = []
 			if candidate_cues: #example: [(word, [[123,124]])]
+				print candidate_cues
+				print 'sentence id: {}, doc id: {}'.format(sentence_number, docID)
 
 				for element in candidate_cues:
 					phrase_structure = get_phrase_structure(docID, sentence_number)
 					splitted_cue_phrase = element[0].split()
 					position = sentence.split().index(splitted_cue_phrase[0])
-					# if len(splitted_cue_phrase)>1:
-						# pos = None
-					# else:
 					dependency = get_connective_dependency(docID, sentence_number, element[0])[0]
+					PoS = return_pos(docID, sentence_number, element[0], element[1])
 					candidate_and_features.append((element[0], element[1], phrase_structure, position, dependency)) # [(word, [[123,124]], 'phrasestructure', position, dependency)]
 
 		# 	#ALL THE CANDIDATES IN THE DOCUMENT
@@ -262,7 +297,6 @@ def extractCandidates(mapping_connectives, amount=None):
 		if amount != None:
 			if count==amount:
 				return all_candidates
-				break
 	return all_candidates
 
 
@@ -286,12 +320,12 @@ if __name__ == '__main__':
 	print 'DONE'
 	# unique_conn_mapping = discourseConnectives()
 	# negative_samples = extractCandidates(unique_conn_mapping) #stored this using pickle
-	print "extracting features from the positive sampes"
+	print "extracting features from the positive samples"
 	training_data = constructTrainingData(KNOWN_RELATIONS)
 	print 'DONE'
 	neg = pickle.load(open('v2_negative_samples.pickle', 'r')) #make sure the pickled data file is in the same directory
 	neg_training = transformNeg(neg)
-	print "extracting features from the positive sampes"
+	print "extracting features from the positive samples"
 	training_data.extend(neg_training)
 	train, target = zip(*training_data)
 	X_train, X_test, y_train, y_test = cross_validation.train_test_split(train, target, test_size=0.2)
@@ -305,4 +339,4 @@ if __name__ == '__main__':
 	print 'DONE'
 
 	print "Accuracy score: {}".format(accuracy(classifier, zip(X_test,y_test)))
-
+	# print classification_report(y_test, predicted)
