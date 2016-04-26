@@ -241,23 +241,6 @@ def return_pos(docID, sentence_number, token, offset):
         return sentence[zip(*sentence)[0].index(token)][1]['PartOfSpeech']
 
 
-def return_pos(docID, sentence_number, token, offset):
-    """
-    return pos tag given the docID sentence number, token and character offset
-    """
-    # print PARSES[docID]['sentences'][sentence_number]['words']
-    # [zip(*PARSES[docID]['sentences'][1]['words'])[0].index(token[0])][1]['PartOfSpeech']
-    sentence = PARSES[docID]['sentences'][sentence_number]['words']
-    if len(token.split()) > 1:
-        combined = []
-        for tok in token.split():
-            PoS = sentence[zip(*sentence)[0].index(tok)][1]['PartOfSpeech']
-            combined.append(PoS)
-        return ' '.join(combined)
-    else:
-        return sentence[zip(*sentence)[0].index(token)][1]['PartOfSpeech']
-
-
 def extract_candidates(mapping_connectives, amount=None):
     """
     return negative samples from the parses file by comparing them with the known connectives.
@@ -353,6 +336,5 @@ if __name__ == '__main__':
     print 'DONE'
 
     print "Accuracy score: {}".format(accuracy(classifier, zip(X_test,y_test)))
-    t_stamp = time.strftime('%D-%H:%m:%S')
-    pickle.dump(open('binairy_classifier.classifier'+t_stamp, 'w+'))
+    pickle.dump(open('binairy_classifier.classifier'+time.strftime('%D-%H:%m:%S'), 'w+'))
     # print classification_report(y_test, predicted)
