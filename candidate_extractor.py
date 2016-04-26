@@ -29,22 +29,6 @@ VECTORIZER = CountVectorizer(ngram_range=(1,8), analyzer='word', lowercase=False
 ANALYZER = VECTORIZER.build_analyzer()
 
 
-def get_part_of_speech(docID, span):
-    """
-    Get PoS from the parses.json file by filename, word and span.
-    """
-    sentencelist = enumerate(PARSES[docID]["sentences"])
-    for sentenceID, sentence in sentencelist:
-        for word_data in sentence["words"]:
-            word = word_data[0]                
-            off_begin = word_data[1]["CharacterOffsetBegin"]
-            off_end = word_data[1]["CharacterOffsetEnd"]
-            part_of_speech = word_data[1]["PartOfSpeech"]
-            begin, end = span
-            if off_begin == begin and off_end == end:
-                return part_of_speech
-
-
 def get_phrase_structure(docID, sentenceID):
     """
     Retrieve phrase_structure from the parses.json file by filename and sentenceID.
@@ -52,16 +36,6 @@ def get_phrase_structure(docID, sentenceID):
     sentencelist = PARSES[docID]["sentences"]
     phrase_structure = sentencelist[sentenceID]["parsetree"]
     return phrase_structure
-
-
-def PS_or_SS(arg1_sentenceID, sentenceID):
-    """
-    Returns Arg1 type (PS or SS) based on sentenceIDs.
-    """
-    if arg1_sentenceID == sentenceID:
-        return "SS"
-    elif arg1_sentenceID == sentenceID-1:
-        return "PS"
 
 
 def discourseConnectives(return_list=True):
@@ -80,53 +54,6 @@ def discourseConnectives(return_list=True):
 				list_of_connectives.append((v, key))
 		return list_of_connectives
 	return connectives
-
-
-def constructTrainingData(list_of_relations):
-	"""
-	returns a list of tuples containing dictioniaries with features.
-	"""
-	#To find all the connectives and store them in a list
-	connectivelist = []
-	tuplelist = []
-	#iterate through the file:
-	for relationID, relation in enumerate(list_of_relations):
-		connective = relation["Connective"]["RawText"]
-		connective_type = relation["Type"]
-		if connective_type != 'Explicit':
-			continue
-		docID = relation["DocID"]
-		tokenlist = relation["Connective"]["TokenList"]
-		sense = relation["Sense"][0]
-		connective_extent = relation["Connective"]["CharacterSpanList"][0]
-		tokenID = tokenlist[0][2]
-		sentenceID = tokenlist[0][3]
-		sentence_position = tokenlist[0][4]
-
-		arg1 = relation["Arg1"]
-		arg1_extent = arg1["CharacterSpanList"][0]
-		arg1_sentenceID = arg1["TokenList"][0][3]
-		arg1_type = PS_or_SS(arg1_sentenceID, sentenceID) #get arg1_type
-		if arg1_type == "PS":
-			arg1_phrase_structure = get_phrase_structure(docID, arg1_sentenceID)
-		else:
-			arg1_phrase_structure = None
-		arg2 = relation["Arg2"]
-		arg2_extent = arg2["CharacterSpanList"][0]
-		arg2_sentenceID = arg2["TokenList"][0][3]
-		part_of_speech = get_part_of_speech(docID, connective_extent)
-		phrase_structure = get_phrase_structure(docID, sentenceID)
-		# print docID, sentenceID, part_of_speech, connective
-		dependency_heading, dependency_attached = get_connective_dependency(docID, sentenceID, connective)
-		connectivelist.append(connective.lower())
-		features = {'connective': connective,
-		 # 'pos': part_of_speech,
-		 'position': sentence_position,
-		 'dependency':dependency_heading,
-		 'phrase_structure':phrase_structure}
-
-		tuplelist.append((features, 1))
-	return tuplelist
 
 
 def get_connective_dependency(docID, sentenceID, connective):
@@ -198,32 +125,6 @@ def comparePhrases(sorted_ngrams, mapping_connectives):
 	return candidates
 
 
-def returnRealConnectives(doc_ID):
-	"""
-	print all the actual connectives in a document.
-	"""
-	real_connectives = []
-	for rel in KNOWN_RELATIONS:
-		if rel['DocID']== doc_ID and rel['Type'] == 'Explicit':
-			real_connectives.append((rel['Connective']['RawText'],rel['Connective']['CharacterSpanList']))
-			# print rel['Connective']['RawText'], rel['Connective']['CharacterSpanList']
-	return real_connectives
-
-
-def return_negative_samples(real_cue_list, candidate_cue_list):
-	"""
-	compare the candidate cues with the real cues, if it's the same then it will be removed rom the candidate list.
-	It will return a list of negative samples of cue phrases. In order for the binary classifier. 
-	"""
-	# print 'THIS IS THE CANDIDATE CUE', candidate_cue_list[0]
-	for candi_cue, offset, __1, __2, __3, __4 in candidate_cue_list:
-		for real_cue, r_offset in real_cue_list:
-			if offset == r_offset:
-				# print zip(*candidate_cue_list)[0].index(candi_cue)
-				real = candidate_cue_list.pop(zip(*candidate_cue_list)[0].index(candi_cue))
-	return candidate_cue_list
-
-
 def return_pos(docID, sentence_number, token, offset):
 	"""
 	return pos tag given the docID sentence number, token and character offset
@@ -239,29 +140,11 @@ def return_pos(docID, sentence_number, token, offset):
 		return ' '.join(combined)
 	else:
 		return sentence[zip(*sentence)[0].index(token)][1]['PartOfSpeech']
-
-
-def return_pos(docID, sentence_number, token, offset):
-	"""
-	return pos tag given the docID sentence number, token and character offset
-	"""
-	# print PARSES[docID]['sentences'][sentence_number]['words']
-	# [zip(*PARSES[docID]['sentences'][1]['words'])[0].index(token[0])][1]['PartOfSpeech']
-	sentence = PARSES[docID]['sentences'][sentence_number]['words']
-	if len(token.split()) > 1:
-		combined = []
-		for tok in token.split():
-			PoS = sentence[zip(*sentence)[0].index(tok)][1]['PartOfSpeech']
-			combined.append(PoS)
-		return ' '.join(combined)
-	else:
-		return sentence[zip(*sentence)[0].index(token)][1]['PartOfSpeech']
-
 
 
 def extract_candidates(mapping_connectives, amount=None):
 	"""
-	return negative samples from the parses file by comparing them with the known connectives.
+	return negative samples from the parses file by comparing them with example connectives.
 	Extract n-grams to find phrases in the parsed data. 
 	I want to see if the connective is already in the relation list, by searching on docid, sentid and possible connective
 	the functions returns the negative samples in the dataset. 
@@ -287,7 +170,7 @@ def extract_candidates(mapping_connectives, amount=None):
 			candidates_with_features = []
 			if candidate_cues: #example: [(word, [[123,124]])]
 				# print candidate_cues
-				# print 'sentence id: {}, doc id: {}'.format(sentence_number, docID)
+	# 			print 'sentence id: {}, doc id: {}'.format(sentence_number, docID)
 
 				for element in candidate_cues:
 					phrase_structure = get_phrase_structure(docID, sentence_number)
@@ -297,12 +180,10 @@ def extract_candidates(mapping_connectives, amount=None):
 					PoS = return_pos(docID, sentence_number, element[0], element[1])
 					candidates_with_features.append((element[0], element[1], phrase_structure, position, dependency, PoS)) # [(word, [[123,124]], 'phrasestructure', position, dependency, PoS)]
 
-		# 	#ALL THE CANDIDATES IN THE DOCUMENT
-			real_connectives = returnRealConnectives(docID)
+
 			doc_condidates.extend(candidates_with_features)
 
-		negative_samples = return_negative_samples(real_connectives, doc_condidates)
-		all_candidates[docID] = negative_samples
+		all_candidates[docID] = doc_condidates
 		count+=1
 		if amount != None:
 			if count==amount:
@@ -326,34 +207,29 @@ def change_format(samples):
 
 
 if __name__ == '__main__':
-	print "Loading training data "
+	print "Loading training data"
 	KNOWN_RELATIONS = [json.loads(line) for line in open(ENGLISH_TRAIN+'relations.json', 'r')]
 	print "Loading parsed data"
 	PARSES = json.load(open(ENGLISH_TRAIN+'parses.json', 'r'))
 	print 'DONE'
-	unique_conn_mapping = discourseConnectives()
-	print 'Extracting negative samples'
-	negative_samples = extract_candidates(unique_conn_mapping) #stored this using pickle
+	known_connectives = discourseConnectives()
+	print 'Extracting candidates'
+	extracted_candidate_cues = extract_candidates(known_connectives)
 	print 'DONE'
-	print "extracting features from the positive samples"
-	training_data = constructTrainingData(KNOWN_RELATIONS)
-	print 'DONE'
-	# neg = pickle.load(open('v2_negative_samples.pickle', 'r')) #make sure the pickled data file is in the same directory
-	neg_training = change_format(negative_samples)
-	print "extracting features from the positive samples"
-	training_data.extend(neg_training)
-	train, target = zip(*training_data)
-	X_train, X_test, y_train, y_test = cross_validation.train_test_split(train, target, test_size=0.2)
-	print 'DONE'
-	print 'Training classifier'
-	encoding = maxent.TypedMaxentFeatureEncoding.train(
-	    zip(X_train, y_train), count_cutoff=3, alwayson_features=True)
+	extracted_candidate_features = zip(*change_format(extracted_candidate_cues))[0]
+	print 'Loading classifier'
+	clf = pickle.load(open('./CLASSIFIERS/binairy_classifier.classifier', 'r'))
+	output = zip(extracted_candidate_features, clf.classify_many(extracted_candidate_features))
 
-	classifier = maxent.MaxentClassifier.train(
-	    zip(X_train, y_train), bernoulli=False, encoding=encoding, trace=0)
-	print 'DONE'
+	# example_output = ({'PoS': u'CC',
+	#    'connective': u'or',
+	#    'dependency': u'indicative-10',
+	#    'phrase_structure': u"( (S (NP (NP (DT The) (NNP London) (NN exchange) (POS 's)) (JJ electronic) (NN price-reporting) (NN system)) (VP (VBD provided) (NP (NP (ADJP (ADJP (RB only) (JJ indicative)) (, ,) (CC or) (JJ non-firm) (, ,)) (NNS prices)) (PP (IN for) (NP (QP (IN about) (CD 40)) (NNS minutes)))) (PP (IN on) (NP (NNP Manic))) (NP (NNP Monday))) (. .)) )\n",
+	#    'position': 11},
+	#   0)
+	# first element of example_output is feature dict and second element is the attached label. 
+	
 
-	print "Accuracy score: {}".format(accuracy(classifier, zip(X_test,y_test)))
-	t_stamp = time.strftime('%D-%H:%m:%S')
-	pickle.dump(open('binairy_classifier.classifier'+t_stamp, 'w+'))
-	# print classification_report(y_test, predicted)
+
+
+
